@@ -103,8 +103,12 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={'/Sign'}
             >
+              <NavLink to='/Dashboard'>
               Sign In
+              </NavLink>
+              
             </Button>
             <Grid container>
               <Grid item xs>

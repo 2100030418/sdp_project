@@ -18,7 +18,9 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { NavLink } from 'react-router-dom';
 import { Paper } from '@mui/material';
+//import img from './images/Chinnu.jpg';
 //import Slider from '@mui/material/Slider';
+import Drawer from '@mui/material';
 
 
 function Copyright(props) {
@@ -40,14 +42,22 @@ export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    
+   
     console.log({
       email: data.get('email'),
       password: data.get('password'),
       backgroundColor: '#ff1744'
     });
   };
+ 
 
   return (
+    //<div style={{ backgroundImage: `url(${img})`,backgroundRepeat: 'no-repeat',
+        //width:'120%', height:"1000px"  }}>
+                
+        
+    
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -164,7 +174,7 @@ export default function SignUp() {
                     sx={{ mt: 3, mb: 2 }}
                     onClick={'/Sign'}
                   >
-                    <NavLink to='/Sign'>
+                    <NavLink to='/Login'>
                     Sign Up
                     </NavLink>
                   </Button>
@@ -183,5 +193,6 @@ export default function SignUp() {
               <Copyright sx={{ mt: 5 }} />
             </Container>
           </ThemeProvider>
+         // </div>
           );
 }
